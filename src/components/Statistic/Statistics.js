@@ -1,3 +1,4 @@
+import { Notification } from 'components/Notification';
 import { StatList } from './StatisticsStyled';
 
 export const Statistics = ({
@@ -16,8 +17,7 @@ export const Statistics = ({
           <p>Positive Feadback: {positiveFeadback}% </p>
         </>
       ) : (
-        <p>There is no feedback</p>
-      )}
+        <Notification message="There is no feedback"/>       )}
     </StatList>
   );
 };

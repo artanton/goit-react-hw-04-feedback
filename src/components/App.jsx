@@ -26,11 +26,7 @@ export const App = () => {
     }
   };
 
-  const feedbackOptions = [
-    { name: 'good', value: good },
-    { name: 'neutral', value: neutral },
-    { name: 'bad', value: bad },
-  ];
+  
 
   const countTotalFeedback = good + neutral + bad;
   const countPositiveFeedbackPercentage =
@@ -49,7 +45,7 @@ export const App = () => {
     >
       <Section title=" Please leave feadback">
         <FeedbackOptions
-          options={feedbackOptions}
+          options={Object.keys({good, neutral, bad})}
           onLeaveFeedback={updateFeedback}
         />
       </Section>
